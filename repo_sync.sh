@@ -2,7 +2,7 @@
 
 GITHUB_USERNAME="andwati"
 
-DESTINATION_FOLDER=~/Github
+DESTINATION_FOLDER=~/GitHub
 
 
 clone_repositories() {
