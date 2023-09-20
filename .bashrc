@@ -210,3 +210,18 @@ alias psa="ps auxf"
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
+
+# pnpm
+export PNPM_HOME="/home/ian/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm endalias config='/usr/bin/git --git-dir=/home/ian/GitHub/dotfiles/.git --work-tree=/home/ian/GitHub/dotfiles'
+
+alias config='/usr/bin/git --git-dir=$HOME/GitHub/dotfiles/.git --work-tree=$HOME/GitHub/dotfiles'
+export PATH=/home/ian/.pyenv/shims:/home/ian/.local/share/pnpm:/home/ian/anaconda3/condabin:/home/ian/.pyenv/bin:/home/ian/.nvm/versions/node/v18.17.1/bin:/home/ian/.cargo/bin:/home/ian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ian/anaconda3/bin
+export PATH="$PATH:~/flutter/bin"
+
+export PATH="/opt/google/chrome/:$PATH"
+export PATH="~/Android/Sdk/platform-tools:$PATH"
