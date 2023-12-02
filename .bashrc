@@ -102,11 +102,11 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-#alias cp="cp -i"                          # confirm before overwriting something
-#alias df='df -h'                          # human-readable sizes
-#alias free='free -m'                      # show sizes in MB
-#alias np='nano -w PKGBUILD'
-#alias more=less
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+alias np='nano -w PKGBUILD'
+alias more=less
 
 xhost +local:root > /dev/null 2>&1
 
@@ -139,6 +139,7 @@ ex ()
       *.tbz2)      tar xjf $1   ;;
       *.tgz)       tar xzf $1   ;;
       *.zip)       unzip $1     ;;
+      *.tar.xz)    tar -xf $1;;
       *.Z)         uncompress $1;;
       *.7z)        7z x $1      ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
@@ -228,3 +229,7 @@ export PATH="~/Android/Sdk/platform-tools:$PATH"
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
