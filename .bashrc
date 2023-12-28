@@ -190,13 +190,6 @@ alias ll='ls -l | less -RF'
 
 alias vim="nvim"
 
-
-# pacman and yay
-alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
-alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
-alias yaysyu='yay -Syu --noconfirm'             # update standard pkgs and AUR pkgs (yay)
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
-
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -212,29 +205,21 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
 
+alias config='/usr/bin/git --git-dir=$HOME/GitHub/dotfiles/.git --work-tree=$HOME/GitHub/dotfiles'
+
+export PATH="~/Android/Sdk/platform-tools:$PATH"
+
+# Created by `pipx` on 2023-12-28 11:13:36
+export PATH="$PATH:/home/ian/.local/bin"
+
 # pnpm
 export PNPM_HOME="/home/ian/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm endalias config='/usr/bin/git --git-dir=/home/ian/GitHub/dotfiles/.git --work-tree=/home/ian/GitHub/dotfiles'
-
-alias config='/usr/bin/git --git-dir=$HOME/GitHub/dotfiles/.git --work-tree=$HOME/GitHub/dotfiles'
-export PATH=/home/ian/.pyenv/shims:/home/ian/.local/share/pnpm:/home/ian/anaconda3/condabin:/home/ian/.pyenv/bin:/home/ian/.nvm/versions/node/v18.17.1/bin:/home/ian/.cargo/bin:/home/ian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ian/anaconda3/bin
-export PATH="$PATH:~/flutter/bin"
-
-export PATH="/opt/google/chrome/:$PATH"
-export PATH="~/Android/Sdk/platform-tools:$PATH"
-
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+# pnpm end
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-
-export PATH="/home/ian/chromium-build/depot_tools:$PATH"
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
