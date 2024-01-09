@@ -1,3 +1,6 @@
 \.git
-#LICENSE
-README.md
+\.gitignore
+\.bin
+
+^/README.*
+^/LICENSE.*
