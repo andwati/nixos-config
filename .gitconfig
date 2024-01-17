@@ -1,8 +1,5 @@
 [user]
 	name = Ian Andwati
 	email = andwatiian@gmail.com
-	signingkey = AF641AD5C1419AF2FD4FFD0A174B2B4EC178FB17
 [init]
 	defaultBranch = main
-[commit]
-	gpgsign = true
