@@ -182,7 +182,7 @@ cd() {
 
 
 # ls alternatives:
-alias ls='exa --icons --color=always --group-directories-first'
+alias ls='eza --icons --color=always --group-directories-first'
 alias la='ls -a'
 alias ll='ls -l | less -RF'
 
