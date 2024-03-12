@@ -29,3 +29,5 @@ else
     fi
 fi
 unset __conda_setup
+
+export GPG_TTY=$(tty)
