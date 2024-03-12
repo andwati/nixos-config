@@ -9,32 +9,12 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# fnm
-export PATH="/home/ian/.local/share/fnm:$PATH"
-eval "`fnm env`"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
 # bun completions
 [ -s "/home/ian/.bun/_bun" ] && source "/home/ian/.bun/_bun"
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-export DENO_INSTALL="/home/ian/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="/home/ian/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
