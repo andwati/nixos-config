@@ -1,0 +1,47 @@
+#                                __ _                   
+#                         ___ _ / /(_)___ _ ___ ___  ___
+#                        / _ `// // // _ `/(_-</ -_)(_-<
+#                        \_,_//_//_/ \_,_//___/\__//___/
+#                                                       
+#
+
+alias mpd='mpd ~/.mpd/mpd.conf '
+alias yolo='git commit -m "$(curl -s http://whatthecommit.com/index.txt)" '
+
+# so that alias can be sudo'ed
+alias sudo='sudo '
+
+# bonus
+alias pins="paru -Slq | fzf -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro paru -S "
+alias curl="curl -K ~/.curlrc "
+alias http="xh "
+
+# use exa instead of ls
+alias ls="eza "
+alias l="eza -lGa "
+alias ll="eza -l "
+alias la="eza -la --git --group-directories-first "
+
+alias -s md=code
+
+alias -s svg=firefox
+
+alias -s json=code
+
+alias -s pdf=okular
+
+function show() {
+  bat $(which $1)
+}
+
+function take() {
+  mkdir -p $@ && cd ${@:$#}
+}
+
+function uuid() {
+  cat /proc/sys/kernel/random/uuid
+}
+
+function millis() {
+  echo $(($(date +%s%N)/1000000))
+}

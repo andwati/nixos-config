@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+status="$(mpc toggle | rg -oP "(?<=\[).*(?=\])")"
+
+mpd_notification "$status"

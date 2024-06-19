@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+fd . "$MUSIC" -e png -x convert {} {.}.jpg
