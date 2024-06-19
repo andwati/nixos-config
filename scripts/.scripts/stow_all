@@ -2,4 +2,4 @@
 
 bat cache --build 
 
-cd "$HOME"/.dotfiles/current && stow $(ls -d */ | grep -v "kde-shortcuts\|wallpapers") -t "$HOME"
+cd "$HOME"/dotfiles/ && stow $(ls -d */ | grep -v "kde-shortcuts\|wallpapers") -t "$HOME"
